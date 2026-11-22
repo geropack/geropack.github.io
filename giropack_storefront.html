@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GIROPACK | حلول التبريد والتغليف</title>
+<meta name="description" content="جيروباك للصناعات الطبية الحديثة - حلول التبريد والشحن المبرد وامتصاص الرطوبة">
+<style>
+:root{--navy:#12365b;--blue:#1d5d91;--red:#e3444d;--ink:#18324d;--muted:#687b8e;--bg:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 2px 14px #102b4810}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}.top{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:29px;font-weight:900;letter-spacing:.4px;color:var(--navy)}.brand span{color:var(--red)}
+nav{display:flex;gap:24px}nav a{color:var(--ink);text-decoration:none;font-size:14px}
+.btn{border:0;border-radius:9px;padding:12px 18px;background:var(--red);color:white;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.dark{background:var(--navy)}.hero{background:linear-gradient(115deg,#102d4d,#1c5c91);color:#fff;padding:76px 0}
+.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px}.eyebrow{color:#b9d9f3;font-size:14px}
+h1{font-size:clamp(32px,5vw,53px);line-height:1.35;margin:12px 0}.hero p{color:#dce9f5;line-height:2;max-width:590px}
+.visual{height:280px;border-radius:25px;background:linear-gradient(145deg,#dceeff,#8db9df);display:flex;align-items:center;justify-content:center;box-shadow:0 24px 55px #061b3344}
+.visual .pack{width:180px;height:220px;border-radius:20px;border:3px solid #fff;background:linear-gradient(145deg,#fff,#a9cde9);display:grid;place-content:center;text-align:center;color:var(--navy);font-weight:900;font-size:22px;box-shadow:0 14px 25px #183b5b44;transform:rotate(-5deg)}
+section{padding:58px 0}.heading{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:24px}h2{margin:0;font-size:29px;color:var(--navy)}.sub{color:var(--muted);margin-top:8px;line-height:1.8}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.filter{border:1px solid #d6e0ea;background:#fff;color:var(--ink);border-radius:30px;padding:9px 16px;cursor:pointer}.filter.active{background:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #e2e9f0;border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #173b5b08}
+.productVisual{height:185px;background:#eaf2fa;display:grid;place-items:center}.productVisual div{width:115px;height:140px;border-radius:13px;background:linear-gradient(145deg,#fff,#9dc5e6);border:2px solid #c4d9eb;display:grid;place-items:center;text-align:center;color:var(--navy);font-weight:900;box-shadow:0 10px 22px #173b5b22}
+.card:nth-child(2) .productVisual div{background:linear-gradient(145deg,#cceaff,#70a8d5)}.card:nth-child(3) .productVisual div{background:linear-gradient(145deg,#fff,#dce5ed)}
+.body{padding:18px}.body h3{margin:0 0 8px}.body p{color:var(--muted);font-size:13px;line-height:1.8;min-height:46px}.price{font-weight:800;color:var(--blue);margin:12px 0}.actions{display:flex;gap:8px}.actions button{flex:1;font-size:13px;padding:11px 8px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{background:#fff;border-radius:14px;padding:22px;text-align:center}.feature b{display:block;font-size:27px;margin-bottom:10px}
+.quote{background:#e8f0f8;border-radius:20px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.quote p{line-height:1.9;color:var(--muted)}
+form{display:grid;gap:11px}input,select,textarea{width:100%;padding:12px;border:1px solid #d5e0ea;border-radius:8px;font:inherit;background:white}textarea{min-height:90px}
+footer{background:#102b49;color:#d7e5f2;padding:35px 0;line-height:2;font-size:14px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cart{position:fixed;left:20px;bottom:20px;background:var(--red);color:white;border:0;border-radius:50px;padding:15px 20px;box-shadow:0 8px 25px #102b4844;cursor:pointer;z-index:8}
+.panel{display:none;position:fixed;inset:0;background:#06182c88;z-index:10;align-items:center;justify-content:center;padding:15px}.panel.open{display:flex}.modal{background:white;border-radius:16px;padding:24px;width:min(480px,100%);max-height:85vh;overflow:auto}.line{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #edf0f4}
+@media(max-width:700px){nav{display:none}.hero{padding:48px 0}.heroGrid{grid-template-columns:1fr}.visual{height:210px}.visual .pack{height:165px;width:140px}.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.quote{grid-template-columns:1fr}.heading{display:block}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.productVisual{height:165px}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><div class="brand">GIRO<span>PACK</span></div><nav><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#about">عن جيروباك</a><a href="#quote">اطلب عرض سعر</a></nav><a class="btn dark" href="#quote">تواصل معنا</a></div></header>
+<main id="home">
+<div class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">جيروباك للصناعات الطبية الحديثة</div><h1>حلول ذكية للتبريد<br>والشحن وحماية المنتجات</h1><p>منتجات تبريد وامتصاص رطوبة مصممة لتلبية احتياجات الشركات والمصانع وشركات التصدير، مع إمكانية التوريد بالجملة والتصنيع حسب الطلب.</p><a class="btn" href="#products">اكتشف منتجاتنا</a></div><div class="visual"><div class="pack">GIROPACK<br><small>COOLING SOLUTIONS</small></div></div></div></div>
+<section id="products"><div class="wrap"><div class="heading"><div><h2>منتجاتنا</h2><div class="sub">اختر المنتج المناسب، أو اطلب مواصفات خاصة لاحتياجك.</div></div></div>
+<div class="filters"><button class="filter active" data-filter="all">كل المنتجات</button><button class="filter" data-filter="cool">منتجات التبريد</button><button class="filter" data-filter="dry">امتصاص الرطوبة</button></div>
+<div class="grid" id="productGrid">
+<article class="card" data-category="cool"><div class="productVisual"><div>GEL<br>PACK</div></div><div class="body"><h3>جل باك للتبريد</h3><p>أكياس جل للتبريد والنقل المبرد، بأوزان ومقاسات متعددة.</p><div class="price">السعر حسب الحجم والكمية</div><div class="actions"><button class="btn dark add" data-name="جل باك للتبريد" data-price="0">أضف للسلة</button><button class="btn quoteBtn" data-name="جل باك للتبريد">اطلب سعر</button></div></div></article>
+<article class="card" data-category="cool"><div class="productVisual"><div>INSTANT<br>ICE PACK</div></div><div class="body"><h3>Instant Ice Pack</h3><p>عبوات تبريد فوري للاستخدامات المناسبة، مع خيارات توريد للشركات.</p><div class="price">السعر حسب الكمية</div><div class="actions"><button class="btn dark add" data-name="Instant Ice Pack" data-price="0">أضف للسلة</button><button class="btn quoteBtn" data-name="Instant Ice Pack">اطلب سعر</button></div></div></article>
+<article class="card" data-category="dry"><div class="productVisual"><div>SO<br>DRY</div></div><div class="body"><h3>سيليكا جل وماصات رطوبة</h3><p>حلول امتصاص الرطوبة لحماية المنتجات أثناء التخزين والشحن.</p><div class="price">السعر حسب الوزن والتعبئة</div><div class="actions"><button class="btn dark add" data-name="سيليكا جل وماصات رطوبة" data-price="0">أضف للسلة</button><button class="btn quoteBtn" data-name="سيليكا جل وماصات رطوبة">اطلب سعر</button></div></div></article>
+</div></div></section>
+<section id="about"><div class="wrap"><div class="heading"><div><h2>لماذا GIROPACK؟</h2><div class="sub">شريك تصنيع وتوريد لحلول التبريد والتغليف.</div></div></div><div class="features"><div class="feature"><b>❄️</b>حلول تبريد متنوعة</div><div class="feature"><b>🏭</b>تصنيع وتوريد للشركات</div><div class="feature"><b>📦</b>مقاسات وتعبئة حسب الطلب</div></div></div></section>
+<section id="quote"><div class="wrap"><div class="quote"><div><h2>اطلب عرض سعر</h2><p>أرسل بياناتك والمنتج والكمية المطلوبة، وسيتواصل فريق جيروباك معك لتأكيد المواصفات والسعر. هذا النموذج في النسخة التجريبية يجهز رسالة واتساب ولا يرسل الطلب إلى قاعدة بيانات بعد.</p></div><form id="quoteForm"><input id="customer" placeholder="اسم الشركة / العميل" required><input id="phone" placeholder="رقم الهاتف" required><select id="item"><option>جل باك للتبريد</option><option>Instant Ice Pack</option><option>سيليكا جل وماصات رطوبة</option><option>منتج أو مقاس خاص</option></select><input id="quantity" placeholder="الكمية المطلوبة"><textarea id="details" placeholder="المقاس أو المواصفات المطلوبة"></textarea><button class="btn" type="submit">إرسال الطلب عبر واتساب</button></form></div></div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="brand" style="color:white">GIRO<span>PACK</span></div>جيروباك للصناعات الطبية الحديثة<br>حلول للنقل والشحن المبرد</div><div>العاشر من رمضان – المنطقة الصناعية الثانية<br>البريد: waleedgiro@gmail.com<br>بيانات الاتصال النهائية تضاف قبل الإطلاق.</div></div></footer>
+<button class="cart" id="cartButton">🛒 السلة (<span id="count">0</span>)</button>
+<div class="panel" id="cartPanel"><div class="modal"><div style="display:flex;justify-content:space-between;align-items:center"><h3>سلة الطلب</h3><button id="closeCart" class="filter">إغلاق</button></div><div id="cartLines"></div><p class="sub">الأسعار والكميات النهائية تؤكدها جيروباك بعد مراجعة الطلب.</p><button class="btn" id="cartQuote">اطلب عرض سعر للسلة</button></div></div>
+<script>
+const cart={};const $=id=>document.getElementById(id);
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{if(!b.dataset.filter)return;document.querySelectorAll('.filter[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.card').forEach(c=>c.style.display=b.dataset.filter==='all'||c.dataset.category===b.dataset.filter?'':'none')}));
+function render(){let n=Object.values(cart).reduce((a,b)=>a+b,0);$('count').textContent=n;$('cartLines').innerHTML=Object.entries(cart).map(([name,q])=>`<div class="line"><span>${name}</span><b>× ${q}</b></div>`).join('')||'<p>السلة فارغة حاليًا.</p>'}
+document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{cart[b.dataset.name]=(cart[b.dataset.name]||0)+1;render();$('cartPanel').classList.add('open')}));
+$('cartButton').onclick=()=>$('cartPanel').classList.add('open');$('closeCart').onclick=()=>$('cartPanel').classList.remove('open');
+document.querySelectorAll('.quoteBtn').forEach(b=>b.onclick=()=>{$('item').value=b.dataset.name;$('quote').scrollIntoView({behavior:'smooth'})});
+function send(text){const url='https://wa.me/?text='+encodeURIComponent(text);window.open(url,'_blank')}
+$('quoteForm').onsubmit=e=>{e.preventDefault();send(`طلب عرض سعر - GIROPACK\nالعميل: ${$('customer').value}\nالهاتف: ${$('phone').value}\nالمنتج: ${$('item').value}\nالكمية: ${$('quantity').value}\nالمواصفات: ${$('details').value}`)};
+$('cartQuote').onclick=()=>{let items=Object.entries(cart).map(([n,q])=>`${n}: ${q}`).join('\n');if(!items)return alert('السلة فارغة');send('طلب عرض سعر من متجر GIROPACK:\n'+items);};
+</script>
+</body></html>
