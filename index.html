@@ -15,7 +15,6 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   color-scheme:dark;--bg:#07202F;--surface:#0D3047;--ink:#E6F6FC;--muted:#9CC0D1;--line:#1D4B66;
   --ice:#14506E;--deep:#031722;--on-deep:#EAF8FD;--accent:#FFA02E;--on-accent:#2A1600;}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#07202F;--surface:#0D3047;--ink:#E6F6FC;--muted:#9CC0D1;--line:#1D4B66;--ice:#14506E;--deep:#031722;--on-deep:#EAF8FD;--accent:#FFA02E;--on-accent:#2A1600}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",system-ui,"Segoe UI",Tahoma,sans-serif;line-height:1.7;font-size:16px}
@@ -61,9 +60,6 @@ h2{font-size:clamp(24px,5vw,34px);margin:0 0 6px;font-weight:900}
 .why div{border-inline-start:4px solid var(--accent);padding:4px 14px}
 .why b{display:block;font-size:18px}
 .why span{color:var(--muted);font-size:15px}
-.cta{background:var(--deep);color:var(--on-deep);border-radius:24px;padding:28px 22px;text-align:center}
-.cta h2{margin-bottom:8px}
-.cta p{color:#BFE0EE;margin:0 0 16px}
 footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 @media(min-width:760px){.hero-grid{grid-template-columns:1.3fr 1fr}}
 @media(prefers-reduced-motion:reduce){.bar i{transition:none}html{scroll-behavior:auto}}
@@ -78,7 +74,7 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 .line button{background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
 .total{display:flex;justify-content:space-between;font-weight:900;font-size:20px;padding:12px 0}
 .f{display:grid;gap:8px;margin-bottom:10px}
-.fab{position:fixed;inset-inline-start:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6;display:flex;flex-direction:column;gap:8px;box-shadow:none}
+.fab{position:fixed;inset-inline-start:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6}
 .fab .btn{box-shadow:0 6px 18px rgba(0,0,0,.25)}
 </style>
 </head>
@@ -98,7 +94,7 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
     <p>ايس جل باك، انستانت ايس باك، سيليكا جيل، حافظات أنسولين وشنط حفظ الطعام. كل ما تحتاجه لنقل وحفظ المنتجات الحساسة للحرارة.</p>
     <a class="btn" href="#products">تصفح المنتجات</a>
    </div>
-   <div class="gauge" aria-live="off">
+   <div class="gauge">
     <div class="num"><span id="t">25</span><small>°م</small></div>
     <div class="bar"><i id="b"></i></div>
     <div class="ends"><span>حرارة الغرفة</span><span>درجة الحفظ</span></div>
@@ -107,12 +103,11 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
   </div>
  </div>
 </div>
-
 <main class="wrap">
  <section id="products">
   <h2>منتجات جيروباك</h2>
   <p class="sub">اختر استخدامك، حدّد الكمية، وأضف للطلب.</p>
-  <div class="chips" id="chips" role="group" aria-label="تصفية حسب الاستخدام"></div>
+  <div class="chips" id="chips"></div>
   <div class="grid" id="grid"></div>
  </section>
  <section id="order">
@@ -136,12 +131,6 @@ footer{padding:26px 0 40px;color:var(--muted);font-size:14px;text-align:center}
 </main>
 <footer>© جيروباك. جميع الحقوق محفوظة.</footer>
 <div class="fab"><a class="btn" href="#order" id="cartbtn">طلبك (٠)</a></div>
-
-<script type="application/json" id="data">{"phone": "201000000000", "currency": "ج.م", "items": [{"id": "p1", "n": "ايس جل باك (أكياس)", "d": "أكياس جل قابلة لإعادة التجميد، خفيفة وتناسب الشنط والصناديق بمختلف المقاسات.", "p": 15, "unit": "للقطعة", "u": ["food", "ship", "trip"], "t": ["قابل لإعادة الاستخدام"], "ic": "bag", "img": ""}, {"id": "p2", "n": "ايس باك (عبوات صلبة)", "d": "عبوات صلبة متينة بمقاسات مختلفة، تحافظ على البرودة لفترة أطول وتتحمل الاستخدام المتكرر.", "p": 35, "unit": "للقطعة", "u": ["food", "ship", "trip"], "t": ["متين"], "ic": "box", "img": ""}, {"id": "p3", "n": "انستانت ايس باك", "d": "كيس تبريد فوري بدون تجميد. اضغط وهز الكيس ويبرد في ثوانٍ. مناسب للإصابات والرحلات.", "p": 20, "unit": "للقطعة", "u": ["med", "trip"], "t": ["استخدام مرة واحدة", "بدون فريزر"], "ic": "bolt", "img": ""}, {"id": "p4", "n": "سيليكا جيل", "d": "أكياس مجففة تمتص الرطوبة وتحمي المنتجات والأجهزة والأغذية من التلف.", "p": 8, "unit": "للكيس", "u": ["food", "ship"], "t": ["مضاد للرطوبة"], "ic": "beads", "img": ""}, {"id": "p5", "n": "حافظات أنسولين", "d": "حافظة معزولة بجيب للجل تحفظ أقلام وأمبولات الأنسولين باردة أثناء السفر والعمل.", "p": 180, "unit": "للقطعة", "u": ["med", "trip"], "t": ["للأدوية", "سهلة الحمل"], "ic": "med", "img": ""}, {"id": "p6", "n": "شنط حفظ الطعام", "d": "شنط معزولة بسعات متعددة تحافظ على الأكل والمشروبات باردة للمطاعم والمنزل والرحلات.", "p": 150, "unit": "للقطعة", "u": ["food", "trip", "ship"], "t": ["معزولة", "سعات متعددة"], "ic": "tote", "img": ""}, {"id": "p7", "n": "سو دراى (مضاد للعفن)", "d": "مضاد للعفن والرطوبة يحمي المنتجات والمخازن والشنط من الفطريات والروائح المتعفنة.", "p": 12, "unit": "للكيس", "u": ["food", "ship"], "t": ["مضاد للعفن", "مضاد للرطوبة"], "ic": "drop", "img": ""}, {"id": "p8", "n": "بى فريش (ماص للأكسجين)", "d": "يمتص الأكسجين وثاني أكسيد الكربون والروائح الكريهة، فيطيل مدة حفظ الأغذية ويحافظ على نضارتها.", "p": 10, "unit": "للكيس", "u": ["food", "ship"], "t": ["يمتص الأكسجين", "يمتص ثاني أكسيد الكربون", "يزيل الروائح"], "ic": "leaf", "img": ""}]}</script>
-<script>
-var D=JSON.parse(document.getElementById("data").textContent);
-var IC={
-bag:'<rect x="14" y="8" width="36" height="46" rx="7"/><path d="M14 18h36M24 30h16M24 38h16"/>',
-box:'<rect x="12" y="22" width="40" height="32" rx="5"/><rect x="16" y="12" width="32" height="10" rx="3"/>',
-bolt:'<path d="M36 6L16 36h13l-4 22 23-32H34z"/>',
-beads:'<circle cx="22" cy="24" r="8"/><circle cx="42" cy="24" r="8"/><circle cx="
+<script src="app.js"></script>
+</body>
+</html>
